@@ -38,5 +38,7 @@ Run the program by executing the main script: ```python3 main.py```
 Example of usage of `pdf` keyword. Also, you can use one argument to reduce image quality.
 ![pdf_keyword_example.png](examples/pdf_keyword_example.png)
 ---
+
 Example of usage of `convert` keyword.
 ![convert_keyword_example.png](examples/convert_keyword_example.png)
+---
