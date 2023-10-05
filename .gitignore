@@ -1,0 +1,6 @@
+.idea/
+venv/
+**/__pycache__/
+logs/
+temp_data/
+.env
