@@ -5,15 +5,15 @@ import sys
 from datetime import datetime
 from converter_bot import ConverterBot
 
-LOGS_DIR = "logs"
-
 
 def configure_logs() -> None:
-    if not os.path.exists(LOGS_DIR):
-        os.makedirs(LOGS_DIR)
+    logs_dir = "logs"
 
-    current_datetime = datetime.now().strftime("%d:%m:%Y_%H:%M:%S")
-    log_filepath = os.path.join(LOGS_DIR, f"{current_datetime}.log")
+    if not os.path.exists(logs_dir):
+        os.makedirs(logs_dir)
+
+    current_datetime = datetime.now().strftime("%d-%m-%Y_%H-%M-%S")
+    log_filepath = os.path.join(logs_dir, f"{current_datetime}.log")
     file_handler = logging.FileHandler(log_filepath)
     console_handler = logging.StreamHandler(sys.stdout)
 
