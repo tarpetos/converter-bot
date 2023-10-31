@@ -6,7 +6,7 @@ from typing import List
 from aiogram import types
 
 from .constants import MAIN_TEMP_DATA_FOLDER, USER_FOLDER_NAME_PREFIX
-from ...config import bot
+from converter_bot.config import bot
 
 
 class FileLoader(ABC):

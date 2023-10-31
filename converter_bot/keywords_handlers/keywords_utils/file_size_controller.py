@@ -4,7 +4,7 @@ from aiogram import types
 from aiogram.exceptions import TelegramEntityTooLarge
 from aiogram.types import FSInputFile
 
-from ...config import bot
+from converter_bot.config import bot
 
 
 async def is_document_sent(
@@ -15,7 +15,6 @@ async def is_document_sent(
             chat_id=message.chat.id,
             document=FSInputFile(file_to_send, filename=new_filename),
         )
+        return True
     except TelegramEntityTooLarge:
         return False
-
-    return True

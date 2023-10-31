@@ -1,4 +1,4 @@
-from typing import Dict
+from typing import Dict, Union
 
 from PIL import Image
 
@@ -9,7 +9,7 @@ class ImageQualityReducer:
 
     def reduce(
         self, quality: int, file_specifier: str = None
-    ) -> Dict[str, str | Image.Image]:
+    ) -> Union[Dict[str, str, Image.Image]]:
         image = Image.open(self.image_path)
         new_path = self.change_path(self.image_path, file_specifier)
         image.save(fp=f"{new_path}", quality=quality)

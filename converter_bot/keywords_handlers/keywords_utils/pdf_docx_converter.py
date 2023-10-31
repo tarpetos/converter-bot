@@ -1,7 +1,7 @@
 import asyncio
 import os
 
-from typing import List, Tuple, Optional
+from typing import List, Tuple, Optional, Union
 
 from pdf2docx import Converter
 from selenium import webdriver
@@ -90,7 +90,7 @@ class DocxToPdf(FileConverter):
 
     def compress(
         self, image_file: str, compression_allowed: bool
-    ) -> Tuple[str, int, int] | str:
+    ) -> Union[Tuple[str, int, int], str]:
         raise NotImplementedError
 
 
@@ -111,5 +111,5 @@ class PdfToDocx(FileConverter):
 
     def compress(
         self, image_file: str, compression_allowed: bool
-    ) -> Tuple[str, int, int] | str:
+    ) -> Union[Tuple[str, int, int], str]:
         raise NotImplementedError
